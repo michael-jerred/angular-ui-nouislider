@@ -1,0 +1,28 @@
+{
+  "name": "angular-ui-nouislider",
+  "description": "Angular directive for the nouislider control",
+  "main": [
+    "src/angular-ui-nouislider.js"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "slider",
+    "ui",
+    "ng",
+    "control",
+    "nouislider"
+  ],
+  "authors": [
+    { "name": "Michael Jerred" }
+  ],
+  "homepage": "http://michael-jerred.github.io/angular-ui-nouislider",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/michael-jerred/angular-ui-nouislider.git"
+  },
+  "dependencies": {
+    "angular": "~1.4.0",
+    "nouislider": "~8.1.0"
+  }
+}
