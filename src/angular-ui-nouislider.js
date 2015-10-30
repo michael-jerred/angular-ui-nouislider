@@ -1,7 +1,7 @@
 'use strict';
 angular.module('ui.nouislider', []).directive('nouiSlider', function() {
     return {
-        restrict: 'AE',
+        restrict: 'A',
         scope: {
             start: '@',
             min: '@',
@@ -59,7 +59,7 @@ angular.module('ui.nouislider', []).directive('nouiSlider', function() {
                     scope.ngModel = isMultiHandle ? values : Number(values[handle]);
                 });
             };
-            slider.noUiSlider.on('update', onUpdate);
+            slider.noUiSlider.on('slide', onUpdate);
 
             scope.$watch('ngModel', function (newValue) {
                 if (newValue) {
@@ -92,7 +92,7 @@ angular.module('ui.nouislider', []).directive('nouiSlider', function() {
                     // merge changes into the options object and recreate the slider
                     angular.merge(options, newOptions);
                     noUiSlider.create(updateSlider, options);
-                    slider.noUiSlider.on('update', onUpdate);
+                    slider.noUiSlider.on('slide', onUpdate);
                 }
             });
         }
