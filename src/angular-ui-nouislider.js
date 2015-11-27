@@ -91,7 +91,7 @@ angular.module('ui.nouislider', []).directive('nouiSlider', function() {
 
                     // merge changes into the options object and recreate the slider
                     angular.merge(options, newOptions);
-                    noUiSlider.create(updateSlider, options);
+                    noUiSlider.create(slider, options);
                     slider.noUiSlider.on('slide', onUpdate);
                 }
             });
