@@ -62,7 +62,7 @@ angular.module('ui.nouislider', []).directive('nouiSlider', function() {
             slider.noUiSlider.on('slide', onUpdate);
 
             scope.$watch('ngModel', function (newValue) {
-                if (newValue) {
+                if (newValue || newValue === 0) {
                     var values = slider.noUiSlider.get();
                     if (!Array.isArray(values)) {
                         values = Number(values);
